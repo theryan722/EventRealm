@@ -27,4 +27,5 @@ if (mysqli_query($db_connection, $request) === TRUE) {
     echo "FALSE 2"; 
   } 
 } 
+mysqli_close($db_connection);
 ?>
