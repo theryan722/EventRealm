@@ -17,7 +17,7 @@ echo "Connected successfully";
 
 $event = $_GET['event']; 
 
-$query = mysqli_query($db_connect, "SELECT * FROM code WHERE code='".$event"'");
+$query = mysqli_query($db_connect, "SELECT * FROM event WHERE code='".$event"'");
 
 if (mysqli_query($query) > 0) {
 	echo "TRUE";
