@@ -15,15 +15,16 @@ if ($db_connection->connect_error) {
   echo "FALSE" . $db_connection->error;  
 } 
 
-$request = mysqli_($db_connection, "SELECT * FROM users WHERE username = '" . $tuser . "'"); 
+$request = "SELECT * FROM users WHERE username = '" . $tuser . "'"; 
 
-if (mysqli_($request) > 0) {
-  echo "FALSE";
+if (mysqli_query($db_connection, $request) === TRUE) {
+  echo "FALSE 1";
 } else {
   $add_user = "INSERT INTO users (username, password) VALUES (" . "'" . $tuser . "'" . "," . "'" . $tpass . "'" . ")";
-  if ($db_connection->$add_user === TRUE) {
-    echo "TRUE";
+  if ($db_connection->query($add_user)) {
+    echo "TRUE 1";
   } else {
-    echo "FALSE"; 
-  }
-}
+    echo "FALSE 2"; 
+  } 
+} 
+?>
