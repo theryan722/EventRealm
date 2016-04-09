@@ -3,10 +3,11 @@
 $server_name = "localhost"; 
 $db_username = ""; 
 $db_password = ""; 
+$db_name = "";
 
 
 //	Create Connection
-$db_connect = new mysqli($server_name, $db_username, $db_password);
+$db_connect = new mysqli($server_name, $db_username, $db_password, $db_name);
 
 // 	Check Connection
 if ($db_connect->connect_error) {
