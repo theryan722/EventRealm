@@ -12,9 +12,8 @@ if ($db_connection->connect_error) {
 } 
 
 $query = "SELECT username from users where username='" . $tuser . "'";
-$result = mysqli_query($db_connection, $query);
 
-if($db_connection->query($result))	{
+if($db_connection->query($query))	{
   $check_password = "SELECT password from users where username='" . $tuser . "'";
   if ($db_connection->query($check_password)) {
     echo "TRUE"; 
@@ -24,5 +23,4 @@ if($db_connection->query($result))	{
 } else{
     echo "FALSE"; 
 }
-
 ?>
