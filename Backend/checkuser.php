@@ -23,4 +23,5 @@ if($db_connection->query($query))	{
 } else{
     echo "FALSE"; 
 }
+mysqli_close($db_connection);
 ?>
