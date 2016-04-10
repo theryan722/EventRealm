@@ -15,4 +15,5 @@ if ($db_connection->query($request)){
 }else{
 	echo "FALSE";
 }
+mysqli_close($db_connection);
 ?>
