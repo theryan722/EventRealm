@@ -12,12 +12,19 @@ if ($db_connection->connect_error) {
   echo "FALSE" . $db_connection->error;  
 } 
 
-$request = "INSERT INTO events (id, name, code, eventinfo) VALUES (" . "'" . $tuser . "','" . $tname . "'" . "," . "'" . $tcode . "'" . "," . "'" . $tinfo . "'" . ")";
+$request = "SELECT * FROM users WHERE username = '" . $tuser . "'"; 
 
-if ($db_connection->query($request)) {
-  echo "TRUE"; 
+if (mysqli_query($db_connection, $request) === TRUE) {
+  echo "FALSE 2"; 
 } else {
-  echo "FALSE";
+  
+  $request = "INSERT INTO events (id, name, code, eventinfo) VALUES (" . "'" . $tuser . "','" . $tname . "'" . "," . "'" . $tcode . "'" . "," . "'" . $tinfo . "'" . ")";
+
+  if ($db_connection->query($request)) {
+    echo "TRUE"; 
+  } else {
+    echo "FALSE";
+  }
 }
 mysqli_close($db_connection);
 ?>
