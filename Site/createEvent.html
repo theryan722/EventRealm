@@ -1,73 +1,72 @@
 <html>
 	<head>
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'></link>
+		<style>
+			@import url("eventStyle.css");
+			#zone {
+			position: fixed;
+			margin-left: 20%;
+			width: 30%;
+			}
 
-			<style>
-				@import url("eventStyle.css");
-				#zone {
-				position: fixed;
-				margin-left: 20%;
-				width: 30%;
-				}
+			#map {
+			position: fixed;
+			margin-left: 50%;
+			float: left;
+			width: 40%;
+			}
+		</style>
+	</head>
+	<body>
 
-				#map {
-				position: fixed;
-				margin-left: 50%;
-				float: left;
-				width: 40%;
-				}
-			</style>
-		</head>
-		<body>
+		<h1> Create Event</h1>
+		<div id="zone"> 
+			<table>
 
-			<h1> Create Event</h1>
-			<div id="zone"> 
-				<table>
+				<td><b>Event Name:</b> </td>
+				<td><input type="text" name="eventName"></input></td>
+				<tr></tr>
 
-					<td><b>Event Name:</b> </td>
-					<td><input type="text" name="eventName"></input></td>
-					<tr></tr>
+				<td><b>Event Code: </b></td>
+				<td><input type="text" name="eventCode"></input></td>
+				<tr></tr>
 
-					<td><b>Event Code: </b></td>
-					<td><input type="text" name="eventCode"></input></td>
-					<tr></tr>
+				<td><b>New Zone:</b> </td>
+				<td><input type="text" name="newZone"></input></td>
+				<tr></tr>
 
-					<td><b>New Zone:</b> </td>
-					<td><input type="text" name="newZone"></input></td>
-					<tr></tr>
+				<td><b>Radius (in meters):</b> </td>
+				<td><input type="text" name="radius"></input></td>
+				<tr></tr>
 
-					<td><b>Radius (in meters):</b> </td>
-					<td><input type="text" name="radius"></input></td>
-					<tr></tr>
+				<td rowspan="2"><b>Message: </b></td>
+				<td rowspan="2"><input type="text" name="message"></input></td>
+				<tr></tr>
 
-					<td rowspan="2"><b>Message: </b></td>
-					<td rowspan="2"><input type="text" name="message"></input></td>
-					<tr></tr>
+				<td><b> Full Details: </b></td>
+				<td><input type="text" name="fullDetails"></input></td>
+				<tr></tr>
 
-					<td><b> Full Details: </b></td>
-					<td><input type="text" name="fullDetails"></input></td>
-					<tr></tr>
-					
-					<td colspan=2><input type="button" value="I'm ready" name="submitEventInfo"></input></td>
-				</table>
-			</div>
+				<td colspan=2><input type="button" value="I'm ready" name="submitEventInfo"></input></td>
+			</table>
+		</div>
 
-			<div id="map"> 
-				hi not much going on here<p>
+		<div id="map"> 
+			hi not much going on here<p>
 				filler
 				<p>
-				filler 
-				<p>
-				filler 
-				<p>
-				filler 
-				<p>
-				filler 
-				<p>
-				filler
-			</div>
+					filler 
+					<p>
+						filler 
+						<p>
+							filler 
+							<p>
+								filler 
+								<p>
+									filler
+								</div>
 
-		</body>
+							</body>
 
 
-	</html>
+						</html>
