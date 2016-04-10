@@ -1,0 +1,231 @@
+<?php
+/* $server_name;
+$db_username;
+$db_password;
+$db_name; */
+  
+include_once('dbinfo.php');
+
+$tuser = $_GET['username'];
+$tpass = $_GET['password'];
+
+$db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+
+if ($db_connection->connect_error) {
+  echo "FALSE" . $db_connection->error;  
+} 
+
+// $request = "SELECT * FROM users WHERE username = '" . $tuser . "'"; 
+
+// if (mysqli_query($db_connection, $request) === TRUE) {
+//   echo "FALSE 1";
+// } else {
+//   $add_user = "INSERT INTO users (username, password) VALUES (" . "'" . $tuser . "'" . "," . "'" . $tpass . "'" . ")";
+//   if ($db_connection->query($add_user)) {
+//     echo "TRUE 1";
+//   } else {
+//     echo "FALSE 2"; 
+//   } 
+// } 
+// mysqli_close($db_connection);
+// ?>
+  
+// <?php 
+  
+// include_once('dbinfo.php');
+// $tuser = $_GET['username'];
+// $tname = $_GET['eventname'];
+// $tcode = $_GET['eventcode'];
+// $tinfo = $_GET['eventinfo'];
+
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+
+// if ($db_connection->connect_error) {
+//   echo "FALSE" . $db_connection->error;  
+// } 
+
+// $request = "INSERT INTO events (id, name, code, eventinfo) VALUES (" . "'" . $tuser . "','" . $tname . "'" . "," . "'" . $tcode . "'" . "," . "'" . $tinfo . "'" . ")";
+
+// if ($db_connection->query($request)) {
+//   echo "TRUE"; 
+// } else {
+//   echo "FALSE";
+// }
+
+// mysqli_close($db_connection);
+  
+// ?>
+  
+// <?php
+
+// include_once('dbinfo.php');
+
+// $tuser = $_GET['username'];
+// $tpass = $_GET['password'];
+
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+
+// if ($db_connection->connect_error) {
+//   echo "FALSE" . $db_connection->error;  
+// } 
+
+// $query = "SELECT username from users where username='" . $tuser . "'";
+
+// if($db_connection->query($query))	{
+//   $check_password = "SELECT password from users where username='" . $tuser . "'";
+//   if ($db_connection->query($check_password)) {
+//     echo "TRUE"; 
+//   } else {
+//     echo "FALSE";
+//   }
+// } else{
+//     echo "FALSE"; 
+// }
+// // ?>uery()
+  
+// <?php
+
+// include_once('dbinfo.php');
+
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+
+// $id = $_GET['event']; 
+// $lat = $_GET['latitude']; 
+// $long = $_GET['longitude']; 
+// $msg_txt = $_GET['msg_txt']; 
+// $msg_email = $_GET['msg_email']; 
+// $sound = $_GET['sound']; 
+
+// if ($db_connection->connect_error) {
+//   echo "FALSE" . $db_connection->error;  
+// } 
+
+// $request = "INSERT INTO zone (id, latitude, longitude, msg_txt, msg_email, sound) VALUES ('" . $id . "','" . $lat . "','" . $long . "','" . $msg_txt . "','" . $msg_email . "','" . $sound . "')"; 
+
+// if ($db_connection->query($request)) {
+//   echo "TRUE"; 
+// } else {
+//   echo "FALSE";
+// }
+
+// mysqli_close($db_connection);
+// ?>
+  
+
+  
+// <?php
+
+// include_once('dbinfo.php');
+
+// $event = $_GET['event']; 
+// $zone = $_GET['zone'];
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+// if ($db_connection->connect_error) {
+//   echo "FALSE" . $db_connection->error;  
+// } 
+
+// $request = "DELETE FROM zones WHERE id = '" . $event . "' AND name = '" . $zone . "'";
+// if ($db_connection->query($request)){
+// 	echo "TRUE";  
+// }else{
+// 	echo "FALSE";
+// }
+// ?>
+  
+// <?php
+  
+// include_once('dbinfo.php');
+// $event = $_GET['event'];
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name);
+// if ($db_connection->connect_error){
+// 	echo "FALSE";
+// }
+// $request = "DELETE FROM events WHERE id = '" . $event . "'";
+// $request2 = "DELETE FROM zones WHERE id = '" . $event . "'";
+// if ($db_connection->query($request)){
+//   if ($db_connection->query($request2)){
+//    echo "TRUE";
+//   }else{
+//     echo "FALSE";
+//   }
+// }else{
+//  echo "FALSE"; 
+// }
+// mysqli_close($db_connection);
+// // ?>
+  
+//   <?php
+  
+//   include_once('dbinfo.php');
+//   $event = $_GET['event']; 
+// 	$zone = $_GET['zone'];
+	
+// 	$db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+//   if ($db_connection->connect_error) {
+//     echo "FALSE" . $db_connection->error;  
+//   } 
+// /*
+// if ($result->num_rows > 0) {
+//     // output data of each row
+//     while($row = $result->fetch_assoc()) {
+//         echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+//     }
+    
+// */
+
+// $result = mysqli_query("SELECT msg_txt FROM zones WHERE id='" . $event . "'");
+
+// // If the query completed without errors, fetch a result
+// if ($result) {
+//   $row = mysql_fetch_assoc($result);
+//   echo $row['msg_txt'];
+// }
+
+
+
+// $request = "SELECT FROM zones WHERE id = '" . $event . "' AND name = '" . $zone . "'";
+// if ($db_connection->query($request)){
+// echo "TRUE";  
+// }else{
+// echo "FALSE";
+// }
+
+// 	$request = "UPDATE zones SET zone='" . $zone . "' WHERE event ='" . $event . "'";
+	
+//   ?>
+  
+//     
+    
+    
+//     <?php
+
+// include_once('dbinfo.php');
+
+// $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
+
+// $id = $_GET['event'];
+// $name = $_GET['name'];
+// $radius = $_GET['radius'];
+// $lat = $_GET['latitude']; 
+// $long = $_GET['longitude']; 
+// $msg_txt = $_GET['msg_txt']; 
+// $msg_email = $_GET['msg_email']; 
+// $sound = $_GET['sound'];
+
+// if ($db_connection->connect_error) {
+//   echo "FALSE" . $db_connection->error;  
+// } 
+
+// $req = "SELECT * FROM zones WHERE name='" . $name . "'"; 
+// if (mysqli_query($db_connection, $req)){
+//  echo "FALSE";
+// }else{
+// $request = "INSERT INTO zones (id, name, radius, latitude, longitude, msg_txt, msg_email, sound) VALUES ('" . $id . "','" . $name . "','" . $radius . "','" . $lat . "','" . $long . "','" . $msg_txt . "','" . $msg_email . "','" . $sound . "')"; 
+
+//   if ($db_connection->query($request)) {
+//       echo "TRUE"; 
+//     } else {
+//       echo "FALSE";
+//     }
+// }
+  
