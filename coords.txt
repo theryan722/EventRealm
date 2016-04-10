@@ -1,0 +1,12 @@
+  front of armory: lat: 38.986044 long: -76.938237 Entrance to the armory  radius: 20 ft 
+  main lounge area: lat 38.986044 long: -76.938996 main area to hack 	radius: 40 ft
+  oculus: lat 38.986152 long: -76.938579 oculus rift, ceo brendan iribe is present radius 10 ft
+  facebook: lat 38.986149 long: -76.938677 facebook representatives present 10ft
+  bloomberg: lat 38.986151 long:-76.938931  rad 10ft
+  mlh/hardware lab lat 38.986158 long: -76.939183 mlh and hardware equipment for rent 10ft
+  microsoft: 38.985925 long -76.938723 microsoft representatives  10ft
+  capital one: lat 38.985919 long -76.938809 capital one representatives, nessie api  10ft
+  bonfire/chilling area lat 38.986021 long -76.938908  30ft
+  nsa lat 38.985926 long -76.939097 NSA 10ft
+  finra lat 38.985921 long -76.939170 10ft
+  eating area lat 38.984854 long -76.939255 30ft
