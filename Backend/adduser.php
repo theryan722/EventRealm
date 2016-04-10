@@ -1,10 +1,13 @@
-<?php 
+<?php
+/* $server_name;
+$db_username;
+$db_password;
+$db_name; */
   
 include_once('dbinfo.php');
+
 $tuser = $_GET['username'];
-$tname = $_GET['eventname'];
-$tcode = $_GET['eventcode'];
-$tinfo = $_GET['eventinfo'];
+$tpass = $_GET['password'];
 
 $db_connection = new mysqli($server_name, $db_username, $db_password, $db_name); 
 
@@ -15,16 +18,14 @@ if ($db_connection->connect_error) {
 $request = "SELECT * FROM users WHERE username = '" . $tuser . "'"; 
 
 if (mysqli_query($db_connection, $request) === TRUE) {
-  echo "FALSE 2"; 
+  echo "FALSE";
 } else {
-  
-  $request = "INSERT INTO events (id, name, code, eventinfo) VALUES (" . "'" . $tuser . "','" . $tname . "'" . "," . "'" . $tcode . "'" . "," . "'" . $tinfo . "'" . ")";
-
-  if ($db_connection->query($request)) {
-    echo "TRUE"; 
+  $add_user = "INSERT INTO users (username, password) VALUES (" . "'" . $tuser . "'" . "," . "'" . $tpass . "'" . ")";
+  if ($db_connection->query($add_user)) {
+    echo "TRUE";
   } else {
-    echo "FALSE";
-  }
-}
+    echo "FALSE"; 
+  } 
+} 
 mysqli_close($db_connection);
 ?>
