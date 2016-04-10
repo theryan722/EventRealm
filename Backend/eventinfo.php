@@ -1,33 +1,20 @@
 <?php
+include_once('dbinfo.php');
 
-$server_name = "localhost"; 
-$db_username = ""; 
-$db_password = ""; 
-$db_name = "";
+$db_connection = new mysqli($server_name, $db_username, $db_password, $db_name);
 
-
-//	Create Connection
-$db_connect = new mysqli($server_name, $db_username, $db_password, $db_name);
-
-// 	Check Connection
-if ($db_connect->connect_error) {
-	echo "There was an error opening the database: " . $db_connect->error; 
+if ($db_connection->connect_error) {
+	echo "FALSE"; 
 } 
-
-echo "Connected successfully"; 
-
 $event = $_GET['event']; 
-
-$query = mysqli_query($db_connect, "SELECT * FROM event WHERE code='".$event"'");
-$result = mysqli_query($query);
-
-if ($result > 0) {
+$query = "SELECT * FROM events WHERE code='" . $event . "'";
+$result = mysqli_query($db_connection, $query);
+if ($db_connection->query($query)) {
 	$value = mysqli_fetch_object($result); 
 	$event_info = $value->eventinfo;
 	echo $event_info;
 } else {
 	echo "FALSE";
 }
-
-
+mysqli_close($db_connection);
 ?>
