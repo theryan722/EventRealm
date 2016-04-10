@@ -15,9 +15,10 @@ if ($db_connection->connect_error) {
   echo "FALSE" . $db_connection->error;  
 } 
 
+
 $request = "SELECT * FROM users WHERE username = '" . $tuser . "'"; 
 
-if (mysqli_query($db_connection, $request) === TRUE) {
+if (mysqli_query($db_connection, $request)) {
   echo "FALSE";
 } else {
   $add_user = "INSERT INTO users (username, password) VALUES (" . "'" . $tuser . "'" . "," . "'" . $tpass . "'" . ")";
