@@ -1,6 +1,7 @@
 h1 {
 color: #856D63;
 font-size: 75px;
+text-shadow: 1px 1px #a1a1a1;
 }
 
 b {
@@ -13,7 +14,7 @@ body {
 text-align: center;
 background-image: url("stripes.png");
 font-family: Open Sans;
-color: #a1a1a1;
+color: #787878;
 }
 
 table {
